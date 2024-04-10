@@ -21,7 +21,7 @@ export const ProductSlideShow = ({ images, title, className }: Props) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperObjet>();
 
   return (
-    <>
+    <div className={className}>
       <Swiper
         /*  style={
           {
@@ -43,7 +43,7 @@ export const ProductSlideShow = ({ images, title, className }: Props) => {
               height={800}
               src={`/products/${image}`}
               alt={title}
-              className={`rounded-lg object-fill ${className}`}
+              className="rounded-lg object-fill"
             />
           </SwiperSlide>
         ))}
@@ -64,11 +64,11 @@ export const ProductSlideShow = ({ images, title, className }: Props) => {
               height={300}
               src={`/products/${image}`}
               alt={title}
-              className={`rounded-lg object-fill ${className}`}
+              className="rounded-lg object-fill"
             />
           </SwiperSlide>
         ))}
       </Swiper>
-    </>
+    </div>
   );
 };

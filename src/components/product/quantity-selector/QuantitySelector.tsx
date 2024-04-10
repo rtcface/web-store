@@ -3,11 +3,11 @@ import { useState } from "react";
 import { IoAddCircleOutline, IoRemoveCircleOutline } from "react-icons/io5";
 
 interface Props {
-  quantity: number;
+  quantity?: number;
 }
 
-export const QuantitySelector = () => {
-  const [count, setCounter] = useState(1);
+export const QuantitySelector = ({ quantity = 1 }: Props) => {
+  const [count, setCounter] = useState(quantity);
   return (
     <>
       <div className="flex">
