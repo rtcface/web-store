@@ -18,7 +18,7 @@ export default function ProductPage({ params }: Props) {
     <div className="mt-5 mb-20 grid md:grid-cols-3 gap-3">
       {/* SlideShow */}
       <div className="col-span-1 md:col-span-2">
-        <ProductSlideShow />
+        <ProductSlideShow images={product.images} title={product.title} />
       </div>
       {/*  Detalles */}
       <div className="col-span-1 px-5 ">
